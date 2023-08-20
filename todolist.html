@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="todolist.css" >
-    <title>Todo List App</title>
+    <link rel="stylesheet" href="todolist.css">
+    <title>ToDo List App</title>
 </head>
+
 <body>
+    <h1 id="heading">Todo List App</h1>
+    <div class="todo-container">
+        <header>
+            <div class="input-container">
+                <input type="text" id="taskInput" placeholder="Type your todo list">
+                <button id="add-btn"><img src="add.png" alt="add-button"></button>
+            </div>
+            <div class="heade-bottom">
+                <p id="complete-All">
+                    <img src="double-tick.png" alt="double-check">
+                    Complete all tasks
+                </p>
+                <p id="clear-Complete">Clear completed</p>
+            </div>
+        </header>
+
+        <main>
+            <ul id="task-List"></ul>
+        </main>
+
+        <footer>
+            <span id="total-Tasks">
+                <span id="task-Counter">0</span>
+                &nbsp;tasks left
+            </span>
+            <div>
+                <p id="all">All</p>
+                <p id="uncompletd">Uncompleted</p>
+                <p id="completed">Completed</p>
+            </div>
+        </footer>
+    </div>
     <script src="todolist.js"></script>
 </body>
+
 </html>
