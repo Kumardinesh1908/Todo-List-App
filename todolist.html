@@ -9,38 +9,54 @@
 </head>
 
 <body>
+    <!-- Main Heading -->
     <h1 id="heading">Todo List App</h1>
-    <div class="todo-container">
+
+    <!-- Main Todo Container -->
+    <div class="todo-Container">
+
+         <!-- Header Section -->
         <header>
-            <div class="input-container">
-                <input type="text" id="taskInput" placeholder="Type your todo list">
-                <button id="add-btn"><img src="add.png" alt="add-button"></button>
+            <!-- Input Container with Icons -->
+            <div id="input-Container">
+                <img src="list.png" alt="list-Icon" id="list-Icon">
+                <input type="text" id="task-Input" placeholder="Type your todo list">                
+                <button id="add-Btn"><img src="add.png" alt="add" id="add-Icon"></button>
             </div>
-            <div class="heade-bottom">
+            <!-- Bottom Header Section with "Complete All Tasks" and "Clear Completed" Actions -->
+            <div id="header-Bottom">
                 <p id="complete-All">
-                    <img src="double-tick.png" alt="double-check">
+                    <img src="double-tick.png" alt="double-check" 
+                    id="doubleCheck-Icon">
                     Complete all tasks
                 </p>
                 <p id="clear-Complete">Clear completed</p>
             </div>
         </header>
 
+        <!-- Main Content Section -->
         <main>
+            <!-- List of Tasks -->
             <ul id="task-List"></ul>
         </main>
 
+        <!-- Footer Section -->
         <footer>
+            <!-- Total Tasks Counter -->
             <span id="total-Tasks">
                 <span id="task-Counter">0</span>
-                &nbsp;tasks left
+                tasks left
             </span>
-            <div>
+            <!-- Footer Filter Options -->
+            <div id="footer-Aside">
                 <p id="all">All</p>
                 <p id="uncompletd">Uncompleted</p>
                 <p id="completed">Completed</p>
             </div>
         </footer>
     </div>
+
+    <!-- JavaScript -->
     <script src="todolist.js"></script>
 </body>
 
