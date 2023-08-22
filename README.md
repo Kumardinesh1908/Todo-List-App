@@ -14,14 +14,21 @@ This app allows you to manage your tasks, mark them as completed, and filter tas
 # Tech Stack
 Language: Vanilla JavaScript, HTML, CSS
 
+# Usage
+- Enter a task in the input field and press Enter or click the "Add" button to add it to the list.
+- Click the checkbox next to a task to mark it as completed.
+- Click the "X" button next to a task to delete it from the list.
+- Use the filter options at the bottom to view all tasks, uncompleted tasks, or completed tasks.
+- Click "Complete All" to mark all tasks as completed.
+- Click "Clear Completed" to remove completed tasks from the list.
+
 # What I Learned
 This project helped me to understand the practical use cases of JavaScript and build a strong foundation in JavaScript development. I also learned about the local storage API and how to use it to preserve ToDo list data even after closing the browser and retrieve them when the user reopens the app.
 
 # Installation
 To install the Todo List app, use git:
 
-git clone git@github.com:imsahadeb/todolist-coding-ninjas.git
-cd todolist-coding-ninjas
+git clone https://github.com/Kumardinesh1908/Todo-List-App.git
 
 # Deployment
 To deploy this project, simply open the index.html file in your browser.
