@@ -1,5 +1,9 @@
 /* Reset some default styling */
-body, h1, h2, h3, p, ul, li {
+body,
+h1,
+p,
+ul,
+li {
     margin: 0;
     padding: 0;
 }
@@ -7,7 +11,8 @@ body, h1, h2, h3, p, ul, li {
 /* Set the base font family and background color */
 body {
     font-family: Arial, sans-serif;
-    background-color: rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    background-image: linear-gradient(135deg, rgb(252, 91, 91), rgb(255, 255, 82));
 }
 
 /* Style for the main heading */
@@ -19,7 +24,7 @@ body {
 }
 
 /* Customize placeholder text appearance */
-::placeholder{
+::placeholder {
     font-size: x-large;
     color: lightgray
 }
@@ -32,12 +37,11 @@ body {
     background-color: #fff;
     border: 5px solid rgba(0, 0, 0, 0.2);
     border-radius: 12px;
-    overflow: hidden;
 }
 
 /* Styling for the header section */
 header {
-    margin: 12px;
+    margin: 12px 12px 0px 12px;
     border-bottom: 1px solid #ddd;
 }
 
@@ -57,16 +61,16 @@ header {
     padding-left: 60px;
     border: none;
     border-radius: 12px;
-    background:  rgba(197, 196, 196, 0.1);
+    background: rgba(197, 196, 196, 0.1);
 }
 
 /* Styling when the input field is focused */
-#task-Input:focus{
-    background: rgba(197,197,197,0.3);
+#task-Input:focus {
+    background: rgba(197, 197, 197, 0.3);
 }
 
 /* Styling for the list icon */
-#list-Icon{
+#list-Icon {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -79,18 +83,18 @@ header {
 #add-Btn {
     background-color: rgba(197, 196, 196, 0.1);
     border: none;
-    position: absolute; 
-    right: 5px; 
-    top: 50%; 
-    transform: translateY(-50%); 
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
     opacity: 0;
     transition: opacity 0.3s;
 }
 
 /* Styling for the add button when input is focused */
-#task-Input:focus + #add-Btn {
+#task-Input:focus+#add-Btn {
     cursor: pointer;
-    opacity: 1;   
+    opacity: 1;
 }
 
 /* Styling for the add icon */
@@ -110,7 +114,7 @@ header {
 }
 
 /* Styling for the double-check icon */
-#doubleCheck-Icon{
+#doubleCheck-Icon {
     width: 25px;
     height: 25px;
     margin-right: 10px;
@@ -118,33 +122,16 @@ header {
 }
 
 /* Styling for clickable actions in header */
-#complete-All, #clear-Complete {
+#complete-All,
+#clear-Complete {
     font-size: 12px;
     color: #9c9c9c;
     cursor: pointer;
 }
 
-#complete-All:hover, #clear-Complete:hover {
+#complete-All:hover,
+#clear-Complete:hover {
     color: black
-}
-
-/* Styling for the main content section */
-main {
-    margin: 12px;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Styling for unordered lists */
-ul {
-    list-style-type: none;
-}
-
-/* Styling for list items */
-li {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
 }
 
 /* Styling for the footer section */
@@ -177,11 +164,96 @@ footer p {
 }
 
 /* Styling for footer filter options */
-#all, #uncompletd, #completed {
+#all,
+#uncompletd,
+#completed {
     margin: 0 2px;
+    text-decoration: none;
 }
 
 /* Styling for hover effect on footer filter option */
-#all:hover, #uncompletd:hover, #completed:hover {
-    color: black
+#all:hover,
+#uncompletd:hover,
+#completed:hover {
+    color: black;
+}
+
+/* Add underline when the link is active */
+#all.active,
+#uncompletd.active,
+#completed.active {
+    text-decoration: underline;
+    color: black;
+}
+
+/* Styling for the main content section */
+main {
+    margin: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styling for unordered lists */
+ul {
+    list-style-type: none;
+    margin-top: -12px;
+}
+
+/* Styling for list items */
+ul li {
+    padding: 5px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow:hidden;
+}
+
+#delete-Btn{
+    opacity: 0;
+    width: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+li:hover #delete-Btn{
+    opacity: 1;
+}
+
+/* Hide the default checkbox */
+ .custom-checkbox {
+    display: none;
+}
+
+#task{
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-checkbox:checked + .checkbox-label::before {
+    content: "\2713"; /* Unicode character for checkmark */
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight:bolder;
+    cursor: pointer;
+    }
+
+.custom-checkbox:checked + .checkbox-label {
+    border-color: #2196F3; 
+    background-color: #2196F3; 
+    cursor: pointer;
 }
