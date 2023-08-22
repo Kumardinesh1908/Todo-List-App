@@ -60,6 +60,20 @@ function removeActiveClassFromFilters() {
     completed.classList.remove("active");
 }
 
+// Load tasks from local storage when the page loads
+document.addEventListener("DOMContentLoaded", () => {
+    const storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) {
+        tasks = JSON.parse(storedTasks);
+        renderList();
+    }
+});
+
+// Function to update local storage with tasks data
+function updateLocalStorage() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
 // Function to render the task list
 function renderList() {
     taskList.innerHTML = '';
@@ -73,6 +87,7 @@ function renderList() {
     taskCounter.innerHTML = uncompletedCount;
     removeActiveClassFromFilters();
     all.classList.add("active");
+    updateLocalStorage();
 }
 // Event listener for the "All" filter
 all.addEventListener("click", renderList);
