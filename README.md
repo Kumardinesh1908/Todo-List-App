@@ -10,6 +10,6 @@ This app allows you to manage your tasks, mark them as completed, and filter tas
 - Mark all tasks as completed.
 - Clear completed tasks.
 - Data persistence using local storage.
-- 
+  
 ## Live Demo
 Check out the live demo of the ToDo List App: https://kumardinesh1908.github.io/Todo-List-App/
