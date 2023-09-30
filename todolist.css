@@ -205,26 +205,26 @@ ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    overflow:hidden;
+    overflow: hidden;
 }
 
-#delete-Btn{
+#delete-Btn {
     opacity: 0;
     width: 25px;
     width: 25px;
     cursor: pointer;
 }
 
-li:hover #delete-Btn{
+li:hover #delete-Btn {
     opacity: 1;
 }
 
 /* Hide the default checkbox */
- .custom-checkbox {
+.custom-checkbox {
     display: none;
 }
 
-#task{
+#task {
     padding-left: 30px;
     cursor: pointer;
 }
@@ -240,20 +240,21 @@ li:hover #delete-Btn{
     cursor: pointer;
 }
 
-.custom-checkbox:checked + .checkbox-label::before {
-    content: "\2713"; /* Unicode character for checkmark */
+.custom-checkbox:checked+.checkbox-label::before {
+    content: "\2713";
+    /* Unicode character for checkmark */
     color: white;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 18px;
-    font-weight:bolder;
+    font-weight: bolder;
     cursor: pointer;
-    }
+}
 
-.custom-checkbox:checked + .checkbox-label {
-    border-color: #2196F3; 
-    background-color: #2196F3; 
+.custom-checkbox:checked+.checkbox-label {
+    border-color: #2196F3;
+    background-color: #2196F3;
     cursor: pointer;
 }
