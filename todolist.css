@@ -81,7 +81,7 @@ header {
 
 /* Styling for the add button */
 #add-Btn {
-    background-color: rgba(197, 196, 196, 0.1);
+    /* background-color: rgba(197, 196, 196, 0.1); */
     border: none;
     position: absolute;
     right: 5px;
